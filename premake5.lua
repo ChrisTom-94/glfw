@@ -12,11 +12,11 @@ project "glfw"
 		"src/internal.h",
 		"src/platform.h",
 		"src/mappings.h",
+		"src/glfw_config.h",
 		"src/context.c",
 		"src/init.c",
 		"src/input.c",
 		"src/monitor.c",
-		"src/platform.c",
 		"src/vulkan.c",
 		"src/window.c",
 		"src/egl_context.c",
@@ -24,11 +24,8 @@ project "glfw"
 		"src/null_platform.h",
 		"src/null_joystick.h",
 		"src/null_init.c",
-
 		"src/null_monitor.c",
 		"src/null_window.c",
-		"src/null_joystick.c",
-
 	}
 	filter "system:linux"
 		pic "On"
@@ -53,7 +50,6 @@ project "glfw"
 		defines
 		{
 			"_GLFW_X11"
-			
 		}
 
 	filter "system:windows"
@@ -80,7 +76,6 @@ project "glfw"
 		{ 
 			"_GLFW_WIN32",
 			"_CRT_SECURE_NO_WARNINGS"
-
 		}
 
 	filter "configurations:Debug"
