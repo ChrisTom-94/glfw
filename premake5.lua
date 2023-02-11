@@ -1,6 +1,8 @@
 project "glfw"
 	kind "StaticLib"
 	language "C"
+	systemversion "latest"
+	staticruntime "On"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -29,11 +31,9 @@ project "glfw"
 		"src/null_monitor.c",
 		"src/null_window.c",
 	}
+
 	filter "system:linux"
 		pic "On"
-
-		systemversion "latest"
-		staticruntime "On"
 
 		files
 		{
@@ -55,8 +55,6 @@ project "glfw"
 		}
 
 	filter "system:windows"
-		systemversion "latest"
-		staticruntime "On"
 
 		files
 		{
