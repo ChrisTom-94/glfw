@@ -33,12 +33,12 @@ project "glfw"
 	}
 
 	filter "action:vs*"
-		targetdir ("bin/VisualStudio/" .. outputdir .. "/%{prj.name}")
-		objdir ("bin-int/VisualStudio/" .. outputdir .. "/%{prj.name}")
+		targetdir ("%{wks.location}/build/bin/VisualStudio/" .. outputdir .. "/Dependencies/%{prj.name}")
+		objdir ("%{wks.location}/build/bin-int/VisualStudio/" .. outputdir .. "/Dependencies/%{prj.name}")
 
 	filter "action:gmake*"
-		targetdir ("bin/Make/" .. outputdir .. "/%{prj.name}")
-		objdir ("bin-int/Make/" .. outputdir .. "/%{prj.name}")
+		targetdir ("%{wks.location}/build/bin/Make/" .. outputdir .. "/Dependencies/%{prj.name}")
+		objdir ("%{wks.location}/build/bin-int/Make/" .. outputdir .. "/Dependencies/%{prj.name}")
 
 	filter "system:linux"
 		pic "On"
