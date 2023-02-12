@@ -4,9 +4,6 @@ project "glfw"
 	systemversion "latest"
 	staticruntime "On"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-
 	files
 	{
 		"include/GLFW/glfw3.h",
@@ -34,6 +31,14 @@ project "glfw"
 		"src/null_joystick.c",
 
 	}
+
+	filter "action:vs*"
+		targetdir ("bin/VisualStudio/" .. outputdir .. "/%{prj.name}")
+		objdir ("bin-int/VisualStudio/" .. outputdir .. "/%{prj.name}")
+
+	filter "action:gmake*"
+		targetdir ("bin/Make/" .. outputdir .. "/%{prj.name}")
+		objdir ("bin-int/Make/" .. outputdir .. "/%{prj.name}")
 
 	filter "system:linux"
 		pic "On"
