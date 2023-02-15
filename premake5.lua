@@ -2,7 +2,7 @@ project "glfw"
 	kind "StaticLib"
 	language "C"
 	systemversion "latest"
-	staticruntime "On"
+	staticruntime "on"
 
 	files
 	{
@@ -98,8 +98,8 @@ project "glfw"
 
 	filter "configurations:Debug"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
