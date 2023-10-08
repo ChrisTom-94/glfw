@@ -12,6 +12,7 @@ project "glfw"
 		"src/platform.h",
 		"src/platform.c",
 		"src/mappings.h",
+		"src/glfw_config.h",
 		"src/context.c",
 		"src/init.c",
 		"src/input.c",
