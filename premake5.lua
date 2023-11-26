@@ -52,7 +52,7 @@ project "glfw"
             "src/posix_time.c",
 			"src/posix_thread.c",
 			"src/posix_poll.h",
-			"src/posix_poll.c"
+			"src/posix_poll.c",
 
 			"src/x11_platform.h",
 			"src/xkb_unicode.h",
@@ -60,10 +60,10 @@ project "glfw"
             "src/x11_monitor.c",
 			"src/x11_window.c",
 			"src/xkb_unicode.c",
-            "src/glx_context.c"
+            "src/glx_context.c",
 
 			"src/linux_joystick.h",
-			"src/linux_joystick.c",
+			"src/linux_joystick.c"
 		}
 
 		defines
