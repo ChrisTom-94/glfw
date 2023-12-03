@@ -94,8 +94,6 @@ project "glfw"
             "src/wgl_context.c",
 		}
 
-		links {"gd132"}
-
 		defines 
 		{ 
 			"_GLFW_WIN32",
